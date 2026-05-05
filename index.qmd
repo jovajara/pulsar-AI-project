@@ -1,23 +1,23 @@
 ---
-title: "Presentaciones en Reveal.js con Quarto y GitHub Pages"
+title: "A Comparative Study of Binary Classification Methods for Pulsar Candidate Selection in the HTRU 2 Survey"
 subtitle: "y como hacer que se suban solas con GitHub Actions"
-author: "Jovanny Jara"
+author: "Jovanny Jara, Carlos Pincheira"
 date: last-modified
 date-format: "D/M/YYYY"
 format:
   revealjs:
     theme: default        # Opciones: beige, blood, moon, night, serif, simple, solarized
-    transition: slide    
-    slide-number: true  
+    transition: slide
+    slide-number: true
     show-slide-number: all
     logo: "https://www.pngall.com/wp-content/uploads/16/Thumbs-Up-Like-PNG-Clipart-thumb.png" # Logo opcional
-    
+
     controls: true
     controls-layout: edges
     html-math-method: mathjax
     width: 1920
-    height: 1080 
-    
+    height: 1080
+
     embed-resources: true
     self-contained-math: true
     execute:
@@ -49,13 +49,13 @@ Si ya tienes un repositorio donde solo quieras incluir una presentación, igualm
 Una vez teniendo todo listo, debes hacer lo siguiente
 
 - Copia los contenidos de este repo sin `README.md` y `.nojekyll` en la carpeta de tu repo (si ya tienes un `.gitignore` sólo incluye las líneas de éste)
-- Prepara tu repositorio para poder publicar tus presentaciones usando `quarto publish gh-pages index.qmd` en la terminal, luego `y` o `yes`. Esto crea una página con esta presentación en tu repositorio. 
+- Prepara tu repositorio para poder publicar tus presentaciones usando `quarto publish gh-pages index.qmd` en la terminal, luego `y` o `yes`. Esto crea una página con esta presentación en tu repositorio.
 
 ---
 
 ## Qué hacemos
 
-- Sube los contenidos a tu repo haciendo 
+- Sube los contenidos a tu repo haciendo
 
 ```bash
 # añadimos la carpeta .github y los archivos .nojekyll e index.qmd al stage
@@ -66,7 +66,7 @@ git commit -m "Mensaje del commit" -m "Cuerpo del mensaje (opcional)"
 git push origin main
 ```
 
-Si todo sale bien el push debió volver a generar la página con esta presentación mediante una GitHub Action presente en `.github/workflows/publish.yml`. 
+Si todo sale bien el push debió volver a generar la página con esta presentación mediante una GitHub Action presente en `.github/workflows/publish.yml`.
 
 El link debería ser `https://tu-usuario.github.io/link-de-tu-repo/`, pero tambien puedes abrir la página de tu repo y hacer clic en la tuerca a la derecha de About y luego marcar la opcion "Use your GitHub Pages website" para tenerla siempre a la mano.
 
@@ -88,7 +88,7 @@ Una vez que hayas subido los cambios, luego de unos cuántos segundos tu página
 
 ## Qué más
 
-Quarto es una herramienta muy poderosa, pero por ahora sólo la estamos usando para hacer presentaciones. Incluso hay muchas cosas sobre Reveal.js que no hemos visto. Lo importante es, si es que no sabes mucho de Markdown, partir mirando [lo básico de Markdown en Quarto](https://quarto.org/docs/authoring/markdown-basics.html) y luego [lo básico de reveal.js](https://quarto.org/docs/presentations/revealjs/). 
+Quarto es una herramienta muy poderosa, pero por ahora sólo la estamos usando para hacer presentaciones. Incluso hay muchas cosas sobre Reveal.js que no hemos visto. Lo importante es, si es que no sabes mucho de Markdown, partir mirando [lo básico de Markdown en Quarto](https://quarto.org/docs/authoring/markdown-basics.html) y luego [lo básico de reveal.js](https://quarto.org/docs/presentations/revealjs/).
 
 Luego puedes ver otras cosas como [temas](https://quarto.org/docs/presentations/revealjs/themes.html) o [cosas más avanzadas](https://quarto.org/docs/presentations/revealjs/advanced.html).
 
